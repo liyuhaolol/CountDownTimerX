@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 31
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
 
     }
     buildTypes {
@@ -33,7 +33,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.liyuhaolol'
                 artifactId = 'count-down-timer'
-                version = '1.0.3'
+                version = '1.0.4'
             }
         }
     }

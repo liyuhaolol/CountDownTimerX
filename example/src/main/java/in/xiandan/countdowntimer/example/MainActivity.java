@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import in.xiandan.countdowntimer.CountDownTimerSupport;
+import in.xiandan.countdowntimer.CountDownTimerX;
 import in.xiandan.countdowntimer.OnCountDownTimerListener;
 import in.xiandan.countdowntimer.TimerState;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText ed_future;
     EditText ed_interval;
 
-    private CountDownTimerSupport mTimer;
+    private CountDownTimerX mTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         }
         long millisInFuture = Long.parseLong(ed_future.getText().toString());
         long countDownInterval = Long.parseLong(ed_interval.getText().toString());
-        mTimer = new CountDownTimerSupport(millisInFuture, countDownInterval);
+        mTimer = new CountDownTimerX(millisInFuture, countDownInterval);
         mTimer.setOnCountDownTimerListener(new OnCountDownTimerListener() {
             @Override
             public void onTick(long millisUntilFinished) {

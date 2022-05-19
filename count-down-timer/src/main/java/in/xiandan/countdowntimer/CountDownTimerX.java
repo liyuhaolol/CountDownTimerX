@@ -9,7 +9,7 @@ import java.util.TimerTask;
  * author  xiandanin
  * created 2017/5/16 11:32
  */
-public class CountDownTimerSupport implements ITimerSupport {
+public class CountDownTimerX implements ITimerSupport {
     private Timer mTimer;
 
     private Handler mHandler;
@@ -33,11 +33,11 @@ public class CountDownTimerSupport implements ITimerSupport {
     private TimerState mTimerState = TimerState.FINISH;
 
     @Deprecated
-    public CountDownTimerSupport() {
+    public CountDownTimerX() {
         this.mHandler = new Handler();
     }
 
-    public CountDownTimerSupport(long millisInFuture, long countDownInterval) {
+    public CountDownTimerX(long millisInFuture, long countDownInterval) {
         this.setMillisInFuture(millisInFuture);
         this.setCountDownInterval(countDownInterval);
         this.mHandler = new Handler();

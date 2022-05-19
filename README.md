@@ -1,4 +1,4 @@
-# CountDownTimerSupport
+# CountDownTimerX
 Android倒计时器，支持开始倒计时、暂停倒计时、继续倒计时、停止倒计时、重新倒计时
 
 ## 示例APK
@@ -9,9 +9,9 @@ Android倒计时器，支持开始倒计时、暂停倒计时、继续倒计时�
 ![](screenshot/count-down-timer-2.gif)
 
 ## 快速开始
-### Android Studio - 在build.gradle中引入
+### Android Studio - 在build.gradle中引入jitpack
 ```java
-implementation 'in.xiandan:count-down-timer:1.0.3'
+implementation 'com.github.liyuhaolol:CountDownTimerX:1.0.4'
 ```
 
 ### 旧版请谨慎升级到1.0.3以上
@@ -22,7 +22,7 @@ implementation 'in.xiandan:count-down-timer:1.0.3'
 #### 初始化
 ```
 //总时长 间隔时间
-CountDownTimerSupport mTimer = new CountDownTimerSupport(millisInFuture, countDownInterval);
+CountDownTimerX mTimer = new CountDownTimerX(millisInFuture, countDownInterval);
 // SimpleOnCountDownTimerListener
 mTimer.setOnCountDownTimerListener(new OnCountDownTimerListener() {
     @Override

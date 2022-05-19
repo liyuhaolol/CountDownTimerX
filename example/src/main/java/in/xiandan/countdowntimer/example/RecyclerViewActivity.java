@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import in.xiandan.countdowntimer.CountDownTimerSupport;
+import in.xiandan.countdowntimer.CountDownTimerX;
 import in.xiandan.countdowntimer.OnCountDownTimerListener;
 import in.xiandan.countdowntimer.TimerState;
 
@@ -21,7 +21,7 @@ import in.xiandan.countdowntimer.TimerState;
  * created 2018/11/9 17:50
  */
 public class RecyclerViewActivity extends AppCompatActivity {
-    private CountDownTimerSupport mTimer;
+    private CountDownTimerX mTimer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         final ExampleAdapter adapter = new ExampleAdapter(data);
         rv.setAdapter(adapter);
 
-        mTimer = new CountDownTimerSupport(maxDuration, 1000);
+        mTimer = new CountDownTimerX(maxDuration, 1000);
         mTimer.setOnCountDownTimerListener(new OnCountDownTimerListener() {
             @Override
             public void onTick(long millisUntilFinished) {

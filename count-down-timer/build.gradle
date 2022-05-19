@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 31
+        versionCode 4
+        versionName "1.0.3"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+}
+
+afterEvaluate {
+    publishing {
+        publications{
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.liyuhaolol'
+                artifactId = 'count-down-timer'
+                version = '1.0.3'
+            }
+        }
+    }
+}
+

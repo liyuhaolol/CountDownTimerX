@@ -9,9 +9,9 @@ Android倒计时器，支持开始倒计时、暂停倒计时、继续倒计时�
 ![](screenshot/count-down-timer-2.gif)
 
 ## 快速开始
-### Android Studio - 在build.gradle中引入jitpack
+### Android Studio - 在build.gradle中引入mavencentral
 ```java
-implementation 'com.github.liyuhaolol:CountDownTimerX:1.0.4'
+implementation 'com.github.liyuhaolol:CountDownTimerX:1.0.5'
 ```
 
 ### 旧版请谨慎升级到1.0.3以上

@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    namespace 'in.xiandan.countdowntimer.example'
+    compileSdk 34
     defaultConfig {
         applicationId "in.xiandan.countdowntimer.example"
-        minSdkVersion 14
-        targetSdkVersion 31
+        minSdk 14
+        targetSdk 34
         versionCode 1
         versionName "1.0.0"
     }
@@ -19,12 +20,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'in.xiandan.countdowntimer.example'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation project(':count-down-timer')
 }

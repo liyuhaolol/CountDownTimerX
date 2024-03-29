@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 31
@@ -7,8 +6,6 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 31
-        versionCode 5
-        versionName "1.0.4"
 
     }
     buildTypes {
@@ -21,21 +18,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'in.xiandan.countdowntimer'
 }
 
 dependencies {
 }
 
-afterEvaluate {
-    publishing {
-        publications{
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.liyuhaolol'
-                artifactId = 'count-down-timer'
-                version = '1.0.4'
-            }
-        }
-    }
-}
 
